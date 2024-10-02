@@ -21,6 +21,5 @@ print_letter('д')
 print_letter('е')
 print_letter('н')
 print_letter('т')
-print_letter('t')
-print_letter('i')
-print_letter('n')
+
+
