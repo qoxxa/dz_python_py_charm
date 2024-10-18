@@ -10,5 +10,5 @@ class User:
         return self.last_name
 
     def get_initials(self):
-        return f"{self.first_name}, {self.last_name}"
+        return f"{self.first_name} {self.last_name}"
 
