@@ -1,0 +1,19 @@
+1. Функция "capitalize" делает строчными все буквы кроме первой.
+Ожидалось, что функция исправляет только первую букву на заглавную,
+однако, она так-же исправляет остальные буквы на строчные.
+
+lesson_04/test_string_utils.py::test_capitalize[kosTya-KosTya] FAILED
+
+E       AssertionError: assert 'Kostya' == 'KosTya'
+E
+E         - KosTya
+E         ?    ^
+E         + Kostya
+E         ?    ^
+
+
+E       AssertionError: assert 'Kostya' == 'KOSTYA'
+E
+E         - KOSTYA
+E         + Kostya
+
