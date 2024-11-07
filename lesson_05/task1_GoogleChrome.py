@@ -14,3 +14,4 @@ delete_button = driver.find_elements(By.XPATH, "//button[text()='Delete']")
 
 print(len(delete_button))
 sleep(5)
+driver.quit()

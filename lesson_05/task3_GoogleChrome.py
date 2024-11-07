@@ -11,3 +11,4 @@ alert = driver.switch_to.alert
 alert.accept()
 
 sleep(5)
+driver.quit()
