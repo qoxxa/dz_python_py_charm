@@ -9,6 +9,7 @@ driver.get('http://the-internet.herokuapp.com/entry_ad')
 
 close_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//div[@class='modal-footer']/p")))
+
 close_button.click()
 
 driver.quit()
