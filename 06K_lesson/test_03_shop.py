@@ -50,7 +50,7 @@ def test_shop(driver):
     zip.send_keys('195298')
     driver.find_element(By.CSS_SELECTOR, '#continue').click()
 
-#Проверка суммы
+#Проверка итоговой суммы
     total = driver.find_element(By.CSS_SELECTOR, '.summary_total_label').text
     price = "Total: $58.29"
     assert total == price

@@ -52,7 +52,7 @@ def test_form_and_submit(driver):
     company.clear()
     company.send_keys('SkyPro')
 
-#Нажатие Submit
+#Нажатие кнопки Submit
     WebDriverWait(driver, 4).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[type=submit]'))
     ).click()
