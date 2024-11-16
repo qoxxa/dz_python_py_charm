@@ -54,5 +54,3 @@ def test_shop(driver):
     total = driver.find_element(By.CSS_SELECTOR, '.summary_total_label').text
     price = "Total: $58.29"
     assert total == price
-
-
