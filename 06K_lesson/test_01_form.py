@@ -44,7 +44,7 @@ def test_form_and_submit(driver):
     country.clear()
     country.send_keys('Россия')
 
-    job = driver.find_element(By.CSS_SELECTOR, 'input[name=job-position')
+    job = driver.find_element(By.CSS_SELECTOR, 'input[name=job-position]')
     job.clear()
     job.send_keys('QA')
 

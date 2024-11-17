@@ -15,7 +15,6 @@ def driver():
 
 #Заходим на сайт
 def test_calculator(driver):
-    driver = webdriver.Chrome()
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
 
 #Вводим в поле delay значение 45

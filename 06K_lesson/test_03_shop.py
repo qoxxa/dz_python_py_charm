@@ -13,7 +13,6 @@ def driver():
 
 #Открываем сайт
 def test_shop(driver):
-    driver = webdriver.Chrome()
     driver.get('https://www.saucedemo.com/')
 
 #Авторизация
