@@ -19,6 +19,10 @@ class RegistrationPage:
         self.driver.find_element(By.CSS_SELECTOR, "[name=job-position]").send_keys(job_position)
         self.driver.find_element(By.CSS_SELECTOR, "[name=company]").send_keys(company)
 
+    def submit_form(self):
+        WebDriverWait(self.driver, 4).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[type=submit]'))).click()
+
     def zip_code_alert(self):
         zip_code_fields = self.driver.find_element(By.CSS_SELECTOR, '#zip-code')
         assert "alert-danger" in zip_code_fields.get_attribute("class")
