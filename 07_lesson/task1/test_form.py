@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 from registration_page import RegistrationPage
-
+from selenium.webdriver.common.by import By
 
 @pytest.fixture()
 def driver():
@@ -30,8 +30,8 @@ def test_registration(driver):
     submit_button = RegistrationPage(driver)
     submit_button.submit_form()
 
-    zip_code = RegistrationPage(driver)
-    zip_code.zip_code_alert()
+    zip_code_fields = driver.find_element(By.CSS_SELECTOR, '#zip-code')
+    assert "alert-danger" in zip_code_fields.get_attribute("class")
 
-    green_backlight = RegistrationPage(driver)
-    green_backlight.back_light()
+    green_backlight = driver.find_elements(By.CSS_SELECTOR, '.alert-success')
+    assert len(green_backlight) == 9

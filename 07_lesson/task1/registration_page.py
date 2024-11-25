@@ -24,10 +24,4 @@ class RegistrationPage:
         WebDriverWait(self.driver, 4).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[type=submit]'))).click()
 
-    def zip_code_alert(self):
-        zip_code_fields = self.driver.find_element(By.CSS_SELECTOR, '#zip-code')
-        assert "alert-danger" in zip_code_fields.get_attribute("class")
 
-    def back_light(self):
-        green_backlight = self.driver.find_elements(By.CSS_SELECTOR, '.alert-success')
-        assert len(green_backlight) == 9
