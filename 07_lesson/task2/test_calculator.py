@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from calculator_page import CalculatorPage
 
+
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()

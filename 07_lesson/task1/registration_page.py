@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class RegistrationPage:
 
     def __init__(self, driver):
@@ -21,7 +22,7 @@ class RegistrationPage:
 
     def submit_form(self):
         WebDriverWait(self.driver, 4).until(
-        EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[type=submit]'))).click()
+            EC.element_to_be_clickable((By.CSS_SELECTOR, 'button[type=submit]'))).click()
 
     def zip_code_alert(self):
         zip_code_fields = self.driver.find_element(By.CSS_SELECTOR, '#zip-code')

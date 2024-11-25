@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from saucedemo import SauceMainPage
 
+
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()
@@ -9,6 +10,7 @@ def driver():
     driver.get('https://www.saucedemo.com/')
     yield driver
     driver.quit()
+
 
 def test_sauce(driver):
     sauce_page = SauceMainPage(driver)
