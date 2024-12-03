@@ -17,7 +17,7 @@ def test_auth():
     }
 
     resp = requests.get(base_url + '/api-v2/projects/', headers=auth_headers)
-    assert resp.status_code == 400
+    assert resp.status_code == 401
 
 
 # 2. Создать проект без обязательного поля 'Название'
